@@ -1,2 +1,4 @@
-# olodoc-bootstrap
-Olodoc Boostrap + Vite Skelethon to Generate Custom Templates
+
+# Olodoc Bootstrap Template Generator
+
+Olodoc Boostrap + Vite Skelethon to Generate Custom Templates.
