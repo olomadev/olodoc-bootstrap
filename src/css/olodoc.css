@@ -3,18 +3,10 @@
  * Copyright 2025 Oloma.dev
  * Licensed under MIT
  */
-@font-face {
-  font-family: 'Hanken Grotesk';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/hankengrotesk/v8/ieVn2YZDLWuGJpnzaiwFXS9tYtpd59A.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 body {
   background-color:var(--bs-body-bg);
   color: var(--bs-body-color);
-  font-family: 'Hanken Grotesk';
+  font-family: var(--ol-body-font-family);
   font-size:var(--bs-body-font-size);
   font-weight:var(--bs-body-font-weight);
   line-height:var(--bs-body-line-height);
@@ -44,7 +36,6 @@ body {
 }
 .navbar-brand {
   font-size: 26px;
-  font-family: 'Hanken Grotesk';
 }
 .navbar a {
   color: var(--bs-primary);
@@ -145,7 +136,6 @@ body {
   }
   .navbar-nav .dropdown-menu.show {
       display: block;
-      border: 2px solid var(--bs-primary);
       opacity: 1
   }
   .navbar-nav .dropend>.dropdown-menu.show {
@@ -765,4 +755,69 @@ pre[class*=language-] {
 }
 .bs-sidenav .nav-sub-item a.active  {
   text-decoration: underline;
+}
+/**
+ * Buttons
+ */
+.btn-secondary {
+    color: var(--ol-btn-secondary-link-color) !important;
+    background-color: var(--ol-btn-secondary-bg-color) !important;
+    border-color: var(--ol-btn-secondary-border-color) !important;
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open>.dropdown-toggle.btn-secondary {
+    background-color: var(--ol-btn-secondary-hover-bg) !important;
+    border-color: var(--ol-btn-secondary-border-color) !important;
+}
+/**
+ * Tabs
+ */
+.tab-pane {
+  background: var(--ol-tab-pane-bg-color);
+  border-left: 1px solid var(--bs-border-color);  
+}
+.back-to-menu-link {
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+/**
+ * Document Search
+ */
+.search-result .search-result-text {
+  margin-bottom: 10px; 
+}
+.search-result .search-result-title {
+  margin-bottom: 10px; 
+}
+.search-result .search-result-item .card-body {
+  padding: 25px;
+}
+.search-result .search-result-item {
+  cursor: pointer;
+  margin-bottom: 20px;
+  border: 2px solid var(--bs-border-color);
+}
+.search-result .search-result-item:hover {
+  border: 2px solid var(--bs-primary);
+}
+.search-result .search-result-item-link {
+  font-size: 15px;
+}
+.search-result .search-result-item-link:hover {
+  text-decoration: inherit;
+}
+.search-result .search-result-item .blockquote-footer {
+  margin-top: 10px;
+  font-weight: normal;
+}
+.no-search-result .no-search-result-title {
+  margin-bottom: 15px;
+}
+.no-search-result .no-search-result-item .card-body {
+  font-size: 15px;
+  padding: 25px;
+}
+.no-search-result .no-search-result-item {
+  margin-bottom: 20px;
+  border: 2px solid var(--bs-border-color);
 }

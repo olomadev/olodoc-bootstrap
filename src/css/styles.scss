@@ -11,28 +11,67 @@
 //
 // Olodoc custom variables
 //
+$body-font-family: 'Hanken Grotesk';
 $sidenav-link-color: #000;
 $sidenav-link-hover-color: #f2f2f2;
 $sidenav-link-active-color: #fff;
 $sidenav-item-border-bottom-color: #e0e0e0;
 $pagination-border-color: #e0e0e0;
 $pagination-background-color: #fff;
+$btn-secondary-link-color: #000;
+$btn-secondary-bg-color: #ececec;
+$btn-secondary-border-color: #000;
+$btn-secondary-hover-bg: #d9d7d7;
+$btn-secondary-hover-border-color: #000;
+$tab-pane-bg-color: #fff;
+$pre-code-font-size: 14px;
+$pre-code-bg-color: #fff;
+$pre-code-border-width: 1px;
+$pre-code-border-color: #e0e0e0;
 
 $navbar-dropdown-item-color: #f5f5f5;
+
+body {
+	--ol-body-font-family: #{$body-font-family};
+}
+
+.btn-secondary {
+  --ol-btn-secondary-link-color: #{$btn-secondary-link-color};
+  --ol-btn-secondary-bg-color: #{$btn-secondary-bg-color};
+  --ol-btn-secondary-border-color: #{$btn-secondary-border-color};
+  --ol-btn-secondary-hover-bg: #{$btn-secondary-hover-bg};
+  --ol-btn-secondary-hover-border-color: #{$btn-secondary-hover-border-color};
+}
 
 .bs-sidenav  {
 	--ol-sidenav-link-color: #{$sidenav-link-color};
 	--ol-sidenav-link-hover-color: #{$sidenav-link-hover-color};
 	--ol-sidenav-link-active-color: #{$sidenav-link-active-color};
 }
+
 .bs-sidenav .nav-item a {
 	--ol-sidenav-item-border-bottom-color: #{$sidenav-item-border-bottom-color}; 
 }
+
 .navbar-nav .dropdown-menu .list-group .list-group-item:hover {
 	--ol-navbar-dropdown-item-color: #{$navbar-dropdown-item-color};
 }
+
 .pagination-nav .control {
 	--ol-pagination-background-color: #{$pagination-background-color};
 	--ol-pagination-border-color: #{$pagination-border-color};
 }
+
+.tab-pane {
+  --ol-tab-pane-bg-color: #{$tab-pane-bg-color};
+}
+
+pre {
+	--ol-pre-code-font-size: #{$pre-code-font-size};
+	--ol-pre-code-bg-color: #{$pre-code-bg-color};
+	--ol-pre-code-border-width: #{$pre-code-border-width};
+	--ol-pre-code-border-color: #{$pre-code-border-color};
+}
+
+
 
