@@ -6,19 +6,28 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
 
-// Then add additional custom code here
+//
+//----- Olodoc Customizations Start --------
+//
+$body-font-family: "Open Sans", sans-serif;
+$body-head-tags-font-family: "Quicksand", sans-serif;
+$body-font-size: 0.90em;
+$body-line-height: 1.65;
+$body-border-color: #e0e0e0;
+$body-footer-font-size: 14px;
+$body-footer-margin-top: 50px;
+$body-footer-padding-top: 40px;
 
-//
-// Olodoc custom variables
-//
-$body-font-family: 'Hanken Grotesk';
 $sidenav-link-color: #000;
+$sidenav-anchor-color: #999b9d;
 $sidenav-link-hover-color: #f2f2f2;
 $sidenav-link-active-color: #fff;
 $sidenav-item-border-bottom-color: #e0e0e0;
 
-$pagination-border-color: #e0e0e0;
+$pagination-border-color: $body-border-color;
 $pagination-background-color: #fff;
+$pagination-iterator-label-color: #000;
+$pagination-folder-label-color: #e3e5e9;
 
 $btn-secondary-link-color: #000;
 $btn-secondary-bg-color: #ececec;
@@ -27,15 +36,34 @@ $btn-secondary-hover-bg: #d9d7d7;
 $btn-secondary-hover-border-color: #000;
 
 $tab-pane-bg-color: #fff;
+
 $pre-code-font-size: 14px;
-$pre-code-bg-color: #fff;
+$pre-code-bg-color: #f6f8fa;
 $pre-code-border-width: 1px;
-$pre-code-border-color: #e0e0e0;
+$pre-code-border-radius-width: 4px;
 
 $navbar-dropdown-item-color: #f5f5f5;
+$navbar-brand-font-size: 27px;
+$navbar-brand-font-family: "Quicksand", sans-serif;
+
+$nav-link-font-size: 17px;
+$nav-link-font-color: #fff;
+
+$alert-note-color: #056dd5;
+$alert-tip-color: #1c7e36;
+$alert-important-color: #8252e0;
+$alert-warning-color: #e9a002;
+$alert-caution-color: #d12329;
 
 body {
 	--ol-body-font-family: #{$body-font-family};
+	--ol-body-head-tags-font-family: #{$body-head-tags-font-family};
+	--ol-body-font-size: #{$body-font-size};
+	--ol-body-line-height: #{$body-line-height};
+	--ol-body-border-color: #{$body-border-color};
+	--ol-body-footer-font-size: #{$body-footer-font-size};
+	--ol-body-footer-margin-top: #{$body-footer-margin-top};
+	--ol-body-footer-padding-top: #{$body-footer-padding-top};
 }
 
 .btn-secondary {
@@ -48,6 +76,7 @@ body {
 
 .bs-sidenav  {
 	--ol-sidenav-link-color: #{$sidenav-link-color};
+	--ol-sidenav-anchor-color: #{$sidenav-anchor-color};
 	--ol-sidenav-link-hover-color: #{$sidenav-link-hover-color};
 	--ol-sidenav-link-active-color: #{$sidenav-link-active-color};
 }
@@ -60,9 +89,21 @@ body {
 	--ol-navbar-dropdown-item-color: #{$navbar-dropdown-item-color};
 }
 
+.navbar-brand {
+	--ol-navbar-brand-font-family: #{$navbar-brand-font-family};
+	--ol-navbar-brand-font-size: #{$navbar-brand-font-size};
+}
+
+.nav-link {
+	--ol-nav-link-font-color: #{$nav-link-font-color};
+	--ol-nav-link-font-size: #{$nav-link-font-size};
+}
+
 .pagination-nav .control {
 	--ol-pagination-background-color: #{$pagination-background-color};
 	--ol-pagination-border-color: #{$pagination-border-color};
+	--ol-pagination-iterator-label-color: #{$pagination-iterator-label-color};
+	--ol-pagination-folder-label-color: #{$pagination-folder-label-color};
 }
 
 .tab-pane {
@@ -73,8 +114,19 @@ pre {
 	--ol-pre-code-font-size: #{$pre-code-font-size};
 	--ol-pre-code-bg-color: #{$pre-code-bg-color};
 	--ol-pre-code-border-width: #{$pre-code-border-width};
-	--ol-pre-code-border-color: #{$pre-code-border-color};
+	--ol-pre-code-border-color: #{$body-border-color};
+	--ol-pre-code-border-radius-width: #{$pre-code-border-radius-width};
 }
 
+.ghd-alert {
+	--ol-alert-border-color: #{$body-border-color};
+	--ol-alert-note-color: #{$alert-note-color};
+	--ol-alert-tip-color: #{$alert-tip-color};
+	--ol-alert-important-color: #{$alert-important-color};
+	--ol-alert-warning-color: #{$alert-warning-color};
+	--ol-alert-caution-color: #{$alert-caution-color};
+}
 
-
+//
+//----- Olodoc Customizations End --------
+//
