@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/src/css/fonts.css">
+  <link rel="stylesheet" href="/src/css/styles.scss">
+  <link rel="stylesheet" href="/src/css/olodoc.css">
+  <link rel="stylesheet" href="/src/css/prism.css">
+</head>
+
+<body class="bg-light">
+  <%- include('navbar'); -%>
+  <%- include('breadcrumb-mobile'); -%>
+
+  <!-- CONTENT -->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-12 col-lg-3 col-md-12 col-sm-12 px-lg-0 border-bottom border-bottom-lg-0 border-end-lg border-gray-300 sidenav">
+          <!-- Side nav bar begin -->
+          <div class="collapse d-lg-block" id="sidenavCollapse">
+            <div class="py-md-5 py-lg-5 ps-lg-4 ps-3 pe-4">
+
+              <%- include('page-version-combobox'); -%>
+              <%- include('page-search-input'); -%>
+
+              <nav class="pagination-nav mt-3">
+                <%- include('page-sidebar-header-link'); -%>
+              </nav>
+
+              <ul class="nav flex-column bs-sidenav mt-3">
+                <%- pageSideNavbarLinks %>
+              </ul>
+            </div>
+          </div>
+          <!-- Side nav bar end -->
+        </div>
+
+        <div id="middle-content" class="document-content col-lg-6 col-md-9 col-sm-12 pt-lg-5 pt-md-3 pt-sm-3">
+            <!-- Breadcrumbs -->
+            <nav aria-label="breadcrumb" class="main-breadcrumb">
+              <ol class="breadcrumb">
+                <%- pageBreadCrumbs %>
+              </ol>
+            </nav>
+
+            <!-- Markdown content -->
+            <div id="markdown-content">
+                <%- pageContent %>
+            </div>
+
+            <!-- Pagination Bar -->
+            <nav class="pagination-nav mt-5">
+                <%- pagination -%>
+                <%- include('page-footer'); -%>
+            </nav>
+        </div>
+
+        <!-- Sponsors -->
+        <div class="document-content col-12 col-lg-2 col-xl-2 ps-4 pt-lg-5 pt-md-3 pt-sm-3">
+          <div class="border-start-lg border-gray-300">
+            <h6 class="text-uppercase">Sponsors</h6>
+              <div class="border border-gray-300" style="width:100%;height: 600px;">
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- / .row -->
+    </div>
+  </section>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script src="/src/js/prism/prism.js"></script>
+  <script src="/src/js/prism/prism-line-highlight.js"></script>
+  <script src="/src/js/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    function onMouseOverFlag(key){
+      var svg = document.getElementById("flag-icons-" + key)
+      svg.classList.remove("grayscale");
+    }
+    function onMouseOutFlag(key){
+      var svg = document.getElementById("flag-icons-" + key)
+      svg.classList.add("grayscale");
+    }
+    function olodocPrevPage(url) {
+        window.location.href = url;
+    }
+    function olodocNextPage(url) {
+        window.location.href = url;
+    }
+    function socialiteLogin(provider) {
+      console.log(provider);
+    }
+  </script>
+</body>
+</html>

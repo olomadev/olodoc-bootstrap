@@ -1,16 +1,11 @@
-// Utilities
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 import { fileURLToPath, URL } from 'node:url'
 import { resolve, dirname } from 'node:path'
+import { ViteEjsPlugin } from 'vite-plugin-ejs';
 
-// Look at the docs !!
-// 
-// https://getbootstrap.com/docs/5.2/getting-started/vite/
 // https://vitejs.dev/config/
-// https://vitejs.dev/guide/env-and-mode.html#env-files
-// 
 export default defineConfig({
-  root: resolve(dirname(fileURLToPath(import.meta.url)), 'src'),
+  // root: resolve(dirname(fileURLToPath(import.meta.url)), 'src'),
   server: {
     host: '0.0.0.0',
     port: 3000
@@ -28,7 +23,16 @@ export default defineConfig({
       }
     }
   },
-  plugins: [],
+  plugins: [
+    ViteEjsPlugin(() => {
+      return {
+        pageSideNavbarLinks: '',
+        pageBreadCrumbs: '',
+        pageContent: '',
+        pagination: '',
+      };
+    }),
+  ],
   define: { 
     'process.env': {},
   },
@@ -47,4 +51,5 @@ export default defineConfig({
       '.vue',
     ],
   }
-})
+
+});
