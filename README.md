@@ -23,7 +23,7 @@ npm run dev
 
 Visit your local address from your browser.
 
-![Localhost](/images/localhost.png)
+![Localhost](/src/images/localhost.png)
 
 ## Customize Your Template
 
@@ -71,11 +71,11 @@ Run the application again
 npm run dev
 ```
 
-![Localhost](/images/localhost.png)
+![Localhost](/src/images/localhost.png)
 
 Visit your local address from your browser, if everything went well you will see that the template main colors have changed as below.
 
-![Boostrap Sass Customization](/images/bootstrap-sass-customization.png)
+![Boostrap Sass Customization](/src/images/bootstrap-sass-customization.png)
 
 ## Exporting Production Ready Css Files
 
@@ -160,4 +160,4 @@ root@localhost:/var/www/olodoc-bootstrap#
 
 Visit your php application from your browser.
 
-![Skeleton Php Application Localhost](/images/example-local.png)
+![Skeleton Php Application Localhost](/src/images/example-local.png)
